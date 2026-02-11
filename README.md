@@ -46,6 +46,8 @@ ESLint-Mastery/
 ├─ package-lock.json
 └─ node_modules/
 
+---
+
 ## How to Run
 
 git clone https://github.com/Robbhedonic/ESLint-Mastery.git
