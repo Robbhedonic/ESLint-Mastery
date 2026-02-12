@@ -128,3 +128,50 @@ const getData = async (url: string) => {
 getData("https://jsonplaceholder.typicode.com/todos/1");
 
 
+//* task 13 
+
+const process = (data: number[]): number[] => {
+    return data
+        .filter((x: number) => {
+            return x > 10;
+        })
+        .map((x: number) => {
+            return x * 2;
+        });
+};
+
+const result = process([5, 12, 8, 20]);
+console.log(`Processed result: ${result}`);
+
+
+//* task 14
+
+
+const timer = (ms: number): Promise<void> => {
+    return new Promise((resolve) => {
+        setTimeout(() => {
+            console.log(`Timer finished after ${ms} milliseconds!`);
+            resolve();
+        }, ms);
+    });
+};
+
+const runTimer = async (): Promise<void> => {
+    console.log("Timer started for 2000 milliseconds...");
+    await timer(2000);
+    console.log("All done!");
+};
+
+runTimer();
+
+
+
+//* task 15
+
+
+const logErr = (m: string): void => {
+    console.error(`Error: ${m}`);
+};
+
+
+logErr("Something went wrong!");
